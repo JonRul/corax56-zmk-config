@@ -6,7 +6,7 @@ url: https://github.com/dnlbauer/corax56-keyboard
 requires: [pro_micro]
 features:
   - keys
-  - encoder
+  # - encoder
 siblings:
   - corax56_left
   - corax56_right
