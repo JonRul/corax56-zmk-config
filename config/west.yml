@@ -8,7 +8,7 @@ manifest:
     - name: zmk
       import: app/west.yml
       remote: zmkfirmware
-      revision: main
+      revision: testdev
       # use this branch for right side encoder support
       # until split encoder is merged into main
       #remote: petejohanson
