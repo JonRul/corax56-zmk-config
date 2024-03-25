@@ -123,11 +123,11 @@
         dvorak {
             display-name = "Colemak";
             bindings = <
-                     &trans   &trans  &trans  &trans  &trans                              &trans     &trans  &trans  &trans  &trans
-       &none         &none    &kp N7  &kp N8  &kp N9  &none                               &none      &kp G   &kp C   &kp T   &none          &none
-&none  &out OUT_TOG  &kp A    &kp N4  &kp N5  &kp N6  &kp N0                              &kp H      &kp D   &kp R   &kp N   &kp S          &none  &none
-       &none         &kp TAB  &kp N1  &kp N2  &kp N3  &kp X            &none    &kp C_PP  &kp B      &kp M   &kp W   &kp V   &kp BACKSPACE  &none
-                                      &none   &none   &mt LSHFT LSHFT  &mo 1    &mo 2     &kp SPACE  &none   &none
+                     &trans     &trans  &trans  &trans  &trans                              &trans     &trans  &trans  &trans  &trans
+       &none         &none      &kp N7  &kp N8  &kp N9  &none                               &none      &kp G   &kp C   &kp T   &none          &none
+&none  &out OUT_TOG  &kp ENTER  &kp N4  &kp N5  &kp N6  &kp N0                              &kp H      &kp D   &kp R   &kp N   &kp S          &none  &none
+       &none         &kp TAB    &kp N1  &kp N2  &kp N3  &kp X            &none    &kp C_PP  &kp B      &kp M   &kp W   &kp V   &kp BACKSPACE  &none
+                                        &none   &none   &mt LSHFT LSHFT  &mo 1    &mo 2     &kp SPACE  &none   &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_DN PG_UP>;
