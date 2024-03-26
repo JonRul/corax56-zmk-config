@@ -3,7 +3,7 @@ id: corax56
 name: Corax56
 type: shield
 url: https://github.com/dnlbauer/corax56-keyboard
-requires: [pro_micro]
+requires: [nice_nano_v2]
 features:
   - keys
   # - encoder
