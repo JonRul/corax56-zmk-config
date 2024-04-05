@@ -95,6 +95,13 @@
             tap-ms = <10>;
             bindings = <&kp MINUS &kp LS(DOT)>;
         };
+
+        testmacro: testmacro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp H &kp E &kp L &kp L &kp O &kp T &kp H &kp E &kp R &kp E>;
+            label = "TESTMACRO";
+        };
     };
 
     combos {
@@ -120,6 +127,11 @@
             bindings = <&to 0>;
             key-positions = <57 56>;
             layers = <5>;
+        };
+
+        key_repeat {
+            bindings = <&key_repeat>;
+            key-positions = <52 55>;
         };
     };
 
@@ -293,11 +305,11 @@
 
         media {
             bindings = <
-                &trans  &trans  &trans  &trans  &trans                              &trans  &trans      &trans            &trans          &trans
-        &trans  &trans  &trans  &trans  &trans  &trans                              &trans  &trans      &trans            &trans          &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                              &trans  &kp C_PREV  &kp C_PLAY_PAUSE  &kp LA(C_NEXT)  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans  &trans  &mo 15    &kp C_PLAY_PAUSE  &trans  &trans      &trans            &trans          &trans  &trans
-                                &trans  &trans  &trans  &trans    &trans            &trans  &trans      &trans
+                &trans  &trans  &trans  &trans      &trans                              &trans  &trans      &trans            &trans          &trans
+        &trans  &trans  &trans  &trans  &trans      &trans                              &trans  &trans      &trans            &trans          &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &testmacro  &trans                              &trans  &kp C_PREV  &kp C_PLAY_PAUSE  &kp LA(C_NEXT)  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans      &trans  &mo 15    &kp C_PLAY_PAUSE  &trans  &trans      &trans            &trans          &trans  &trans
+                                &trans  &trans      &trans  &trans    &trans            &trans  &trans      &trans
             >;
 
             sensor-bindings =
