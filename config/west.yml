@@ -15,8 +15,5 @@ manifest:
       # until split encoder is merged into main
       #remote: petejohanson
       #revision: stephen/split-encoder
-    - name: zmk-helpers
-      remote: urob
-      revision: main
   self:
     path: config
