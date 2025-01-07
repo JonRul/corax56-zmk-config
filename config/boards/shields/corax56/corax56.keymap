@@ -199,11 +199,11 @@
 
         davinci {
             bindings = <
-                &trans  &trans      &trans      &trans            &trans                    &trans     &trans                &trans    &trans       &trans
-        &trans  &trans  &trans      &trans      &trans            &trans                    &trans     &kp LS(SINGLE_QUOTE)  &kp APOS  &trans       &trans  &trans
-&trans  &trans  &trans  &kp LG(N2)  &kp LG(N3)  &kp LG(NUMBER_4)  &trans                    &trans     &kp J                 &kp K     &kp L        &trans  &trans  &trans
-        &trans  &trans  &trans      &kp I       &kp O             &trans  &trans    &trans  &kp LG(B)  &kp F9                &kp F12   &kp LS(F12)  &trans  &trans
-                                    &trans      &trans            &trans  &trans    &trans  &trans     &trans                &trans
+                &trans  &trans  &trans        &trans        &trans                    &trans     &trans      &trans      &trans       &trans
+        &trans  &trans  &trans  &kp LS(APOS)  &kp LS(SEMI)  &trans                    &trans     &kp LG(N2)  &kp LG(N3)  &kp LG(N4)   &trans  &trans
+&trans  &trans  &trans  &trans  &trans        &trans        &trans                    &trans     &kp J       &kp K       &kp L        &trans  &trans  &trans
+        &trans  &trans  &trans  &kp I         &kp O         &trans  &trans    &trans  &kp LG(B)  &kp F9      &kp F12     &kp LS(F12)  &trans  &trans
+                                &trans        &trans        &trans  &trans    &trans  &trans     &trans      &trans
             >;
         };
 
