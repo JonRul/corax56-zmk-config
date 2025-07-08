@@ -268,7 +268,7 @@
                 &trans            &trans         &trans          &trans  &trans                              &trans  &trans     &trans     &trans  &trans
         &trans  &trans            &kp LS(N1)     &kp UNDERSCORE  &kp Z   &trans                              &trans  &kp F      &sch       &kp Y   &trans     &trans
 &trans  &trans  &kp SINGLE_QUOTE  &kp SEMICOLON  &trans          &kp U   &kp LEFT_BRACKET                    &trans  &kp ENTER  &kp DEL    &kp L   &kp MINUS  &trans  &trans
-        &trans  &mo 7             &kp LS(NUHS)   &kp LS(N7)      &kp X   &kp X             &trans    &trans  &kp B   &kp B      &kp SLASH  &trans  &trans     &trans
+        &trans  &mo 7             &kp LS(NUHS)   &kp LS(N7)      &kp X   &kp F20           &trans    &trans  &kp B   &kp B      &kp SLASH  &trans  &trans     &trans
                                                  &to 4           &mo 7   &mo 9             &mo 8     &trans  &mo 10  &to 2      &to 3
             >;
 
@@ -296,7 +296,7 @@
                 &none      &none     &none             &none           &none                           &none            &none     &none      &none      &none
         &trans  &kp SLASH  &trans    &trans            &trans          &trans                          &none            &none     &none      &none      &none      &trans
 &trans  &mo 12  &kp LSHFT  &kp LALT  &kp LEFT_CONTROL  &kp LGUI        &kp CAPSLOCK                    &kp HOME         &kp LEFT  &kp UP     &kp DOWN   &kp RIGHT  &kp END  &trans
-        &trans  &ud_tilde  &trans    &trans            &trans          &trans        &trans    &mo 12  &kp PAUSE_BREAK  &trans    &kp PG_UP  &kp PG_DN  &none      &trans
+        &trans  &ud_tilde  &trans    &trans            &trans          &kp F20       &trans    &mo 12  &kp PAUSE_BREAK  &trans    &kp PG_UP  &kp PG_DN  &none      &trans
                                      &trans            &mt LALT MINUS  &lt 9 N0      &trans    &trans  &trans           &trans    &trans
             >;
 
@@ -311,7 +311,7 @@
                 &none      &none      &none      &none         &none                           &none              &none         &none         &none         &none
         &trans  &none      &kp COMMA  &kp DOT    &trans        &none                           &none              &kp N7        &kp N8        &kp N9        &none   &trans
 &trans  &trans  &kp LSHFT  &kp LALT   &kp LCTRL  &kp LEFT_GUI  &kp CAPSLOCK                    &kp RIGHT_BRACKET  &kp N4        &kp N5        &kp NUMBER_6  &kp N0  &trans  &trans
-        &trans  &none      &none      &none      &none         &none         &trans    &trans  &kp SLASH          &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans
+        &trans  &none      &none      &none      &none         &kp F20       &trans    &trans  &kp SLASH          &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans
                                       &trans     &trans        &trans        &trans    &mo 11  &kp SLASH          &trans        &trans
             >;
 
