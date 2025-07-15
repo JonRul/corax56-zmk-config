@@ -46,41 +46,41 @@
     };
 };
 
-&i2c1 {
-    status = "okay";
-    pinctrl-0 = <&i2c1_default>;
-    pinctrl-1 = <&i2c1_sleep>;
-    pinctrl-names = "default", "sleep";
-    as5600_scroll: as5600@36 {
-        compatible = "zmk,input-ams-as5600";
-        reg = <0x36>;
-        label = "AS5600";
+// &i2c1 {
+//     status = "okay";
+//     pinctrl-0 = <&i2c1_default>;
+//     pinctrl-1 = <&i2c1_sleep>;
+//     pinctrl-names = "default", "sleep";
+//     as5600_scroll: as5600@36 {
+//         compatible = "zmk,input-ams-as5600";
+//         reg = <0x36>;
+//         label = "AS5600";
 
-        #sensor-binding-cells = <2>; // ← Diese Zeile ist **Pflicht**, damit `sensor-bindings` funktioniert
-    };
-};
-
-
+//         #sensor-binding-cells = <2>; // ← Diese Zeile ist **Pflicht**, damit `sensor-bindings` funktioniert
+//     };
+// };
 
 
 
-&pinctrl {
-    spi0_default: spi0_default {
-        group1 {
-            psels = <NRF_PSEL(SPIM_SCK, 0, 29)>,
-                <NRF_PSEL(SPIM_MOSI, 0, 31)>,
-                <NRF_PSEL(SPIM_MISO, 0, 25)>;
-        };
-    };
-    spi0_sleep: spi0_sleep {
-        group1 {
-            psels = <NRF_PSEL(SPIM_SCK, 0, 29)>,
-                <NRF_PSEL(SPIM_MOSI, 0, 31)>,
-                <NRF_PSEL(SPIM_MISO, 0, 25)>;
-            low-power-enable;
-        };
-    };
-};
+
+
+// &pinctrl {
+//     spi0_default: spi0_default {
+//         group1 {
+//             psels = <NRF_PSEL(SPIM_SCK, 0, 29)>,
+//                 <NRF_PSEL(SPIM_MOSI, 0, 31)>,
+//                 <NRF_PSEL(SPIM_MISO, 0, 25)>;
+//         };
+//     };
+//     spi0_sleep: spi0_sleep {
+//         group1 {
+//             psels = <NRF_PSEL(SPIM_SCK, 0, 29)>,
+//                 <NRF_PSEL(SPIM_MOSI, 0, 31)>,
+//                 <NRF_PSEL(SPIM_MISO, 0, 25)>;
+//             low-power-enable;
+//         };
+//     };
+// };
 
 // nice_view_spi: &spi0 {
 //     compatible = "nordic,nrf-spim";

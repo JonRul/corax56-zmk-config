@@ -194,7 +194,7 @@
                                          &mo 14      &mo 15  &sk LSHFT  &mo 5         &sl 6  &kp SPACE     &to 27        &mo 17
             >;
 
-            sensor-bindings = <&as5600_scroll PG_DN PG_UP>;
+            // sensor-bindings = <&as5600_scroll PG_DN PG_UP>;
         };
 
         davinci {
