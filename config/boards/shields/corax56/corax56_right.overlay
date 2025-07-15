@@ -27,9 +27,9 @@
         ;
 };
 
-&encoder_right {
-    status = "okay";
-};
+// &encoder_right {
+//     status = "okay";
+// };
 
 
 &pinctrl {
