@@ -17,6 +17,7 @@ manifest:
     - name: zmk-driver-ams-as5600
       remote: adolto
       revision: main
+      path: modules/input/zmk-driver-ams-as5600
       # use this branch for right side encoder support
       # until split encoder is merged into main
       #remote: petejohanson
