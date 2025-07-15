@@ -189,12 +189,16 @@
             bindings = <
                      &tog 17  &tog 1     &none       &none   &mo 18                          &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
         &tog 4       &mo 17   &kp COMMA  &kp PERIOD  &kp P   &kp Z                           &kp F         &kp G         &kp C         &kp T         &kp Y          &none
-&mo 19  &key_repeat  &kp A    &kp O      &kp E       &kp I   &kp U                           &kp H         &kp D         &kp R         &kp N         &kp S          &kp L  &kp ENTER
+&scroll  &key_repeat  &kp A    &kp O      &kp E       &kp I   &kp U                           &kp H         &kp D         &kp R         &kp N         &kp S          &kp L  &kp ENTER
         &kp ESC      &kp TAB  &kp Q      &kp J       &kp K   &kp X      &kp K_MUTE    &to 2  &kp B         &kp M         &kp W         &kp V         &kp BACKSPACE  &none
                                          &mo 14      &mo 15  &sk LSHFT  &mo 5         &sl 6  &kp SPACE     &to 27        &mo 17
             >;
 
             // sensor-bindings = <&as5600_scroll PG_DN PG_UP>;
+            bindings = <
+              &scroll
+            >;
+
         };
 
         davinci {
