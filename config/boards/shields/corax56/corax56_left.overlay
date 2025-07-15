@@ -44,11 +44,25 @@
         };
     };
 };
+&i2c1 {
+    status = "okay";
+    sda-pin = <22>;  // P0.22 = D20
+    scl-pin = <23>;  // P0.23 = D21
+    clock-frequency = <I2C_BITRATE_STANDARD>;
 
-nice_view_spi: &spi0 {
-    compatible = "nordic,nrf-spim";
-    pinctrl-0 = <&spi0_default>;
-    pinctrl-1 = <&spi0_sleep>;
-    pinctrl-names = "default", "sleep";
-    cs-gpios = <&pro_micro 4 GPIO_ACTIVE_HIGH>;
+    as5600@36 {
+        compatible = "ams,as5600";
+        reg = <0x36>;
+        label = "AS5600";
+        step-size = <64>; // optional – wie fein ein Schritt sein soll
+    };
 };
+
+
+// nice_view_spi: &spi0 {
+//     compatible = "nordic,nrf-spim";
+//     pinctrl-0 = <&spi0_default>;
+//     pinctrl-1 = <&spi0_sleep>;
+//     pinctrl-names = "default", "sleep";
+//     cs-gpios = <&pro_micro 4 GPIO_ACTIVE_HIGH>;
+// };
