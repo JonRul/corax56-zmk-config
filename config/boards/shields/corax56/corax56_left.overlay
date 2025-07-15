@@ -44,36 +44,36 @@
         };
     };
 };
-&pinctrl {
-    i2c1_default: i2c1_default {
-        group1 {
-            psels = <NRF_PSEL(TWIM_SDA, 0, 20)>, <NRF_PSEL(TWIM_SCL, 0, 21)>;
-        };
-    };
-    i2c1_sleep: i2c1_sleep {
-        group1 {
-            psels = <NRF_PSEL(TWIM_SDA, 0, 20)>, <NRF_PSEL(TWIM_SCL, 0, 21)>;
-            low-power-enable;
-        };
-    };
-};
+// &pinctrl {
+//     i2c1_default: i2c1_default {
+//         group1 {
+//             psels = <NRF_PSEL(TWIM_SDA, 0, 20)>, <NRF_PSEL(TWIM_SCL, 0, 21)>;
+//         };
+//     };
+//     i2c1_sleep: i2c1_sleep {
+//         group1 {
+//             psels = <NRF_PSEL(TWIM_SDA, 0, 20)>, <NRF_PSEL(TWIM_SCL, 0, 21)>;
+//             low-power-enable;
+//         };
+//     };
+// };
 
 
-&i2c1 {
-    status = "okay";
-    pinctrl-0 = <&i2c1_default>;
-    pinctrl-1 = <&i2c1_sleep>;
-    pinctrl-names = "default", "sleep";
+// &i2c1 {
+//     status = "okay";
+//     pinctrl-0 = <&i2c1_default>;
+//     pinctrl-1 = <&i2c1_sleep>;
+//     pinctrl-names = "default", "sleep";
 
 
-    as5600_scroll: as5600@36 {
-        compatible = "zmk,as5600";
-        reg = <0x36>;
-        label = "AS5600";
+//     as5600_scroll: as5600@36 {
+//         compatible = "zmk,as5600";
+//         reg = <0x36>;
+//         label = "AS5600";
 
-        #sensor-binding-cells = <2>; // ← Diese Zeile ist **Pflicht**, damit `sensor-bindings` funktioniert
-    };
-};
+//         #sensor-binding-cells = <2>; // ← Diese Zeile ist **Pflicht**, damit `sensor-bindings` funktioniert
+//     };
+// };
 
 
 
