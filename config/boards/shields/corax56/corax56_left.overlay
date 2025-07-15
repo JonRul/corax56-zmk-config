@@ -61,7 +61,7 @@
 
 
     as5600_scroll: as5600@36 {
-        compatible = "ams,as5600";
+        compatible = "zmk,as5600";
         reg = <0x36>;
         label = "AS5600";
 
