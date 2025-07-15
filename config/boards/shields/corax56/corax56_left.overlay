@@ -50,12 +50,13 @@
     scl-pin = <23>;  // P0.23 = D21
     clock-frequency = <I2C_BITRATE_STANDARD>;
 
-    as5600@36 {
+    as5600: as5600@36 {
         compatible = "ams,as5600";
         reg = <0x36>;
         label = "AS5600";
         step-size = <64>; // optional – wie fein ein Schritt sein soll
     };
+
 };
 
 
