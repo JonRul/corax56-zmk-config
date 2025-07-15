@@ -6,10 +6,16 @@ manifest:
       url-base: https://github.com/petejohanson
     - name: urob
       url-base: https://github.com/urob
+    - name: adolto
+      url-base: https://github.com/adolto
+
   projects:
     - name: zmk
       import: app/west.yml
       remote: zmkfirmware
+      revision: main
+    - name: zmk-driver-ams-as5600
+      remote: adolto
       revision: main
       # use this branch for right side encoder support
       # until split encoder is merged into main
