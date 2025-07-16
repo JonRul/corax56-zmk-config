@@ -14,6 +14,9 @@ manifest:
       import: app/west.yml
       remote: zmkfirmware
       revision: main
+    - name: zmk-driver-ams-as5600
+      path: modules/sensor/zmk-driver-ams-as5600
+      import: false
 
 
     # - name: zmk-studio-messages
