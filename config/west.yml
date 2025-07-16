@@ -21,6 +21,7 @@ manifest:
     - name: zmk-studio-messages
       path: modules/msgs/zmk-studio-messages
       url: https://github.com/zmkfirmware/zmk-studio-messages
+      revision: main
 
   self:
     path: config
