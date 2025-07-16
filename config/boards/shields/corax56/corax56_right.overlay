@@ -46,6 +46,21 @@
     };
 };
 
+&i2c1 {
+    status = "okay";
+    pinctrl-0 = <&i2c1_default>;
+    pinctrl-1 = <&i2c1_sleep>;
+    pinctrl-names = "default", "sleep";
+
+    as5600_scroll: as5600@36 {
+        compatible = "zmk,input-ams-as5600";
+        reg = <0x36>;
+        label = "AS5600";
+        
+
+    };
+};
+
 // &i2c1 {
 //     status = "okay";
 //     pinctrl-0 = <&i2c1_default>;
