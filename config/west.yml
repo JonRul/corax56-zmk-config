@@ -6,18 +6,12 @@ manifest:
       url-base: https://github.com/petejohanson
     - name: urob
       url-base: https://github.com/urob
-    - name: adolto
-      url-base: https://github.com/adolto
 
   projects:
     - name: zmk
       import: app/west.yml
       remote: zmkfirmware
       revision: main
-    - name: zmk-driver-ams-as5600
-      remote: adolto
-      revision: main
-      path: modules/input/zmk-driver-ams-as5600
     # - name: zmk-studio-messages
     #   path: modules/msgs/zmk-studio-messages
     #   url: https://github.com/zmkfirmware/zmk-studio-messages
