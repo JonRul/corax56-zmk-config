@@ -7,6 +7,12 @@ manifest:
     - name: urob
       url-base: https://github.com/urob
 
+    - name: local
+      url-base: ""
+
+
+
+
   projects:
     - name: zmk
       import: app/west.yml
@@ -14,8 +20,9 @@ manifest:
       revision: main
     - name: zmk-driver-ams-as5600
       path: modules/sensor/zmk-driver-ams-as5600
+      remote: local
+      url: ""
       revision: main
-      remote: none
 
     # - name: zmk-studio-messages
     #   path: modules/msgs/zmk-studio-messages
