@@ -7,8 +7,8 @@ manifest:
     - name: urob
       url-base: https://github.com/urob
 
-    - name: myrepo
-      url-base: https://github.com/JonRul
+    # - name: myrepo
+    #   url-base: https://github.com/JonRul
 
 
 
@@ -17,16 +17,16 @@ manifest:
       import: app/west.yml
       remote: zmkfirmware
       revision: main
-    # - name: zmk-driver-ams-as5600
-    #   # path: modules/sensor/zmk-driver-ams-as5600
-    #   remote: myrepo
-    #   revision: main
-    #   url: https://github.com/JonRul/zmk-driver-ams-as5600
 
-    - name: zmk-driver-ams-as5600
-      remote: myrepo
-      revision: dev
-      path: modules/input/zmk-driver-ams-as5600
+    ## own repo
+    # - name: zmk-driver-ams-as5600
+    #   remote: myrepo
+    #   revision: dev
+    #   path: modules/input/zmk-driver-ams-as5600
+
+    - name: zmk-driver-ams-as5600 # <-- new entry
+      remote: adolto
+      revision: main
 
 
 
