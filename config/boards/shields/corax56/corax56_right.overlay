@@ -63,6 +63,11 @@
     };
 };
 
+/as5600_listener {
+    compatible = "zmk,input-listener";
+    device = <&as5600>;
+};
+
 // &i2c1 {
 //     status = "okay";
 //     pinctrl-0 = <&i2c1_default>;
