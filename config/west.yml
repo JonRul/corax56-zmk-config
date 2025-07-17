@@ -18,7 +18,7 @@ manifest:
       remote: zmkfirmware
       revision: main
     - name: zmk-driver-ams-as5600
-      path: modules/sensor/zmk-driver-ams-as5600
+      path: ${GITHUB_WORKSPACE}/modules/sensor/zmk-driver-ams-as5600
       url: .
     # - name: zmk-driver-ams-as5600
     #   path: modules/sensor/zmk-driver-ams-as5600
