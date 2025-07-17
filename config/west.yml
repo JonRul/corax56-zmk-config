@@ -8,7 +8,7 @@ manifest:
       url-base: https://github.com/urob
 
     - name: myrepo
-      url-base: https://github.com
+      url-base: https://github.com/JonRul
 
 
 
