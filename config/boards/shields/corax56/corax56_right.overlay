@@ -65,11 +65,11 @@
 
 
 / {
-    as5600_listener {
+    as5600_listener: as5600_listener {
         compatible = "zmk,input-listener";
         device = <&as5600_scroll>;
     };
-}
+};
 
 // &i2c1 {
 //     status = "okay";
