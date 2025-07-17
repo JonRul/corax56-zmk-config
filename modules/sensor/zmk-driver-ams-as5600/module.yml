@@ -1,3 +1,0 @@
-name: zmk-driver-ams-as5600
-build:
-  cmake: .
