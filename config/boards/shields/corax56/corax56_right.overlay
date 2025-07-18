@@ -65,19 +65,11 @@
 
 
 / {
-    zip_scroll_scaler: zip_scroll_scaler {
-       compatible = "zmk,input-processor-zip-scroll-scaler";
-       scale = <10>;
-       invert = <0>;
-    };
-
     as5600_listener: as5600_listener {
         compatible = "zmk,input-listener";
         device = <&as5600_scroll>;
-        input-processors = <&zip_scroll_scaler>;
     };
 };
-
 
 // &i2c1 {
 //     status = "okay";
