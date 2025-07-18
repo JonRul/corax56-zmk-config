@@ -1,4 +1,4 @@
-if SHIELD_CORAX56_RIGHT
+if SHIELD_CORAX56_LEFT
 
 config ZMK_KEYBOARD_NAME
     default "Corax56"
