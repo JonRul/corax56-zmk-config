@@ -556,11 +556,11 @@
 
         left_wasd {
             bindings = <
-                &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &kp Q   &kp W   &kp E   &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &kp A   &kp S   &kp D   &trans                    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                                &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans                    &trans    &trans    &trans     &trans     &trans
+        &trans  &trans  &kp Q   &kp W   &kp E   &trans                    &trans    &trans    &trans     &trans     &trans     &trans
+&trans  &trans  &trans  &kp A   &kp S   &kp D   &trans                    &kp HOME  &kp LEFT  &kp UP     &kp DOWN   &kp RIGHT  &kp END  &trans
+        &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans    &trans    &kp PG_UP  &kp PG_DN  &trans     &trans
+                                &trans  &trans  &trans  &trans    &trans  &trans    &trans    &trans
             >;
         };
     };
