@@ -153,6 +153,13 @@
             wait-ms = <12>;
             tap-ms = <25>;
         };
+
+        macro_192: macro_192 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp N1 &kp N9 &kp N2 &kp DOT &kp N1 &kp N6 &kp N8 &kp DOT &kp N1 &kp N7 &kp N8 &kp DOT>;
+            label = "MACRO_192";
+        };
     };
 
     combos {
@@ -425,10 +432,10 @@
 
         mail {
             bindings = <
-                &trans  &trans  &trans  &trans  &trans                    &jonasgoogle  &m7onas1ukas  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans  &trans                    &trans        &trans        &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                    &trans        &trans        &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans        &trans        &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans                    &jonasgoogle  &m7onas1ukas  &trans  &trans  &macro_192
+        &trans  &trans  &trans  &trans  &trans  &trans                    &trans        &trans        &trans  &trans  &trans      &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                    &trans        &trans        &trans  &trans  &trans      &trans  &trans
+        &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans        &trans        &trans  &trans  &trans      &trans
                                 &trans  &trans  &trans  &trans    &trans  &trans        &trans        &trans
             >;
         };
