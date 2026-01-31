@@ -300,8 +300,8 @@
         sym_layer_android {
             bindings = <
                 &trans  &trans  &trans  &trans  &trans                    &trans     &trans      &trans      &trans           &trans
-        &trans  &trans  &trans  &trans  &trans  &trans                    &trans     &kp RA(N8)  &kp LA(N9)  &kp NUBS         &trans        &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                    &kp EQUAL  &kp LS(N8)  &kp LS(N9)  &kp LS(N0)       &kp LS(NUBS)  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans  &trans                    &trans     &kp RA(N8)  &kp RA(N9)  &kp NUBS         &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                    &kp EQUAL  &kp LS(N8)  &kp LS(N9)  &kp LS(N0)       &kp LS(NUBS)  &kp LA(NUBS)  &trans
         &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans     &kp RA(N7)  &kp RA(N0)  &kp NON_US_HASH  &trans        &trans
                                 &trans  &trans  &trans  &trans    &trans  &trans     &trans      &trans
             >;
