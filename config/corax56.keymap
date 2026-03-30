@@ -90,6 +90,7 @@
 
             bindings = <&tmux2_tap>, <&tmux2_layer>;
         };
+        };
 
     macros {
 
