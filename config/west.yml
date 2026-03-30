@@ -13,13 +13,12 @@ manifest:
     - name: myrepo
       url-base: https://github.com/JonRul
 
-
-
   projects:
     - name: zmk
       import: app/west.yml
       remote: zmkfirmware
-      revision: main
+      revision: v0.3
+      # revision: main
 
     # own repo
     - name: zmk-driver-ams-as5600
@@ -31,18 +30,15 @@ manifest:
     #   remote: adolto
     #   revision: main
 
-
-
     # - name: zmk-driver-ams-as5600
     #   path: ${GITHUB_WORKSPACE}/modules/sensor/zmk-driver-ams-as5600
     #   url: .
-      
+
     #   # import: false
     # - name: zmk-driver-ams-as5600
     #   path: modules/sensor/zmk-driver-ams-as5600
     #   remote: myrepo
     #   import: false
-
 
     # - name: zmk-studio-messages
     #   path: modules/msgs/zmk-studio-messages
@@ -51,4 +47,3 @@ manifest:
 
   self:
     path: config
-

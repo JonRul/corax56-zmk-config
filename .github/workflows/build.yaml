@@ -1,6 +1,6 @@
 on:
   push:
-    branches: [ "main", "main2", "rotary2","rotary3","rotary3-2", "build", "build-as5600", "build-as5600-debug", "build-as5600-integrated", "build-as5600-right-master" ]
+    branches: [ "main", "main2", "rotary2","rotary3","rotary3-2", "build", "build-as5600", "build-as5600-debug", "build-as5600-integrated", "build-as5600-right-master", "zmk-pin-old-version" ]
   pull_request_target:
     branches: [ "main" ]
 concurrency:
@@ -9,4 +9,5 @@ concurrency:
 
 jobs:
   build:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@v0.3
+    # uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
