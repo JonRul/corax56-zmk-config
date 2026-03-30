@@ -225,11 +225,11 @@
         home {
             display-name = "QWERTY";
             bindings = <
-                      &trans     &trans    &trans            &trans    &none                                &trans        &trans         &trans             &trans    &trans
-        &trans        &trans     &trans    &trans            &trans    &trans                               &trans        &trans         &trans             &trans    &trans     &trans
-&trans  &kp CAPSLOCK  &kp LSHFT  &kp LALT  &kp LEFT_CONTROL  &kp LGUI  &kp CAPSLOCK                         &kp CAPSLOCK  &kp RGUI       &kp RIGHT_CONTROL  &kp RALT  &kp RSHFT  &kp CAPSLOCK  &trans
-        &trans        &trans     &trans    &trans            &mo 14    &trans        &kp LGUI    &kp RGUI   &trans        &trans         &trans             &trans    &trans     &trans
-                                           &trans            &trans    &trans        &trans      &kp ENTER  &kp ESC       &kp BACKSPACE  &to 3
+                      &trans     &bt BT_CLR  &bt BT_NXT        &out OUT_TOG  &none                                &trans        &trans         &trans             &trans    &trans
+        &trans        &trans     &trans      &trans            &trans        &trans                               &trans        &trans         &trans             &trans    &trans     &trans
+&trans  &kp CAPSLOCK  &kp LSHFT  &kp LALT    &kp LEFT_CONTROL  &kp LGUI      &kp CAPSLOCK                         &kp CAPSLOCK  &kp RGUI       &kp RIGHT_CONTROL  &kp RALT  &kp RSHFT  &kp CAPSLOCK  &trans
+        &trans        &trans     &trans      &trans            &mo 14        &trans        &kp LGUI    &kp RGUI   &trans        &trans         &trans             &trans    &trans     &trans
+                                             &trans            &trans        &trans        &trans      &kp ENTER  &kp ESC       &kp BACKSPACE  &to 3
             >;
 
             sensor-bindings =
