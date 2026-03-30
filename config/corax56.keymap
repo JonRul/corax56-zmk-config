@@ -11,8 +11,6 @@
 #define DOUBLE 5
 #define ADJUST 6
 
-// additional caps word keys
-
 &caps_word { continue-list = <UNDERSCORE MINUS LS(MINUS) UP DOWN LEFT RIGHT BSPC DEL>; };
 
 / {
@@ -38,7 +36,6 @@
             label = "SHIFTSTICKY";
             bindings = <&none>;
             #binding-cells = <1>;
-            quick-release;
             release-after-ms = <1000>;
         };
 
@@ -46,7 +43,6 @@
             compatible = "zmk,behavior-hold-tap";
             label = "NEW_BEHAVIOR";
             bindings = <&none>, <&sk>;
-
             #binding-cells = <2>;
             tapping-term-ms = <10>;
         };
@@ -67,8 +63,6 @@
     };
 
     macros {
-        // undead `
-
         ud_grave: ud_grave {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -76,8 +70,6 @@
             tap-ms = <10>;
             bindings = <&kp GRAVE &kp SPACE>;
         };
-
-        // undead ~
 
         ud_tilde: ud_tilde {
             compatible = "zmk,behavior-macro";
@@ -87,8 +79,6 @@
             bindings = <&kp TILDE &kp SPACE>;
         };
 
-        // undead ^
-
         ud_caret: ud_caret {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -96,8 +86,6 @@
             tap-ms = <10>;
             bindings = <&kp CARET &kp SPACE>;
         };
-
-        // undead '
 
         ud_sqt: ud_sqt {
             compatible = "zmk,behavior-macro";
@@ -107,8 +95,6 @@
             bindings = <&kp SQT &kp SPACE>;
         };
 
-        // undead "
-
         ud_dqt: ud_dqt {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -116,8 +102,6 @@
             tap-ms = <10>;
             bindings = <&kp LS(SQT) &kp SPACE>;
         };
-
-        // ascii arrow ->
 
         asc_arr: asc_arr {
             compatible = "zmk,behavior-macro";
@@ -132,24 +116,6 @@
             #binding-cells = <0>;
             bindings = <&kp S &kp C &kp H>;
             label = "SCH";
-            wait-ms = <12>;
-            tap-ms = <25>;
-        };
-
-        jonasgoogle: jonasgoogle {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp J &kp O &kp N &kp A &kp S &kp DOT &kp R &kp U &kp L &kp I &kp K &kp LA(L) &kp G &kp O &kp O &kp G &kp L &kp E &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>;
-            label = "JONASGOOGLE";
-            wait-ms = <12>;
-            tap-ms = <25>;
-        };
-
-        m7onas1ukas: m7onas1ukas {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp N7 &kp O &kp N &kp A &kp S &kp N1 &kp U &kp K &kp A &kp S &kp LA(L) &kp G &kp O &kp O &kp G &kp L &kp E &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>;
-            label = "M7ONAS1UKAS";
             wait-ms = <12>;
             tap-ms = <25>;
         };
@@ -174,17 +140,11 @@
 
         gm_capsword {
             bindings = <&caps_word>;
-
-            // caps on G+M
-
             key-positions = <28 29>;
         };
 
         sticky_adjust {
             bindings = <&sl 11>;
-
-            // sticky adjust layer on LALT+RALT
-
             key-positions = <51 56>;
         };
 
@@ -205,7 +165,7 @@
         &tog 4       &mo 18   &kp COMMA  &kp PERIOD  &kp P   &kp Z                           &kp F         &kp G         &kp C         &kp T         &kp Y          &none
 &mo 20  &key_repeat  &kp A    &kp O      &kp E       &kp I   &kp U                           &kp H         &kp D         &kp R         &kp N         &kp S          &kp L  &kp ENTER
         &kp ESC      &kp TAB  &kp Q      &kp J       &kp K   &kp X      &kp K_MUTE    &to 2  &kp B         &kp M         &kp W         &kp V         &kp BACKSPACE  &none
-                                         &mo 15      &mo 16  &sk LSHFT  &mo 5         &sl 6  &kp SPACE     &to 28        &to 28
+                                         &mo 15      &mo 16  &shiftsticky LSHFT  &mo 5   &sl 6  &kp SPACE     &to 28        &to 28
             >;
 
             // sensor-bindings = <&as5600_scroll PG_DN PG_UP>;
@@ -321,7 +281,7 @@
         &trans  &kp SLASH  &trans    &trans            &trans          &trans                          &none            &none     &none      &none      &none      &trans
 &trans  &mo 13  &kp LSHFT  &kp LALT  &kp LEFT_CONTROL  &kp LGUI        &kp CAPSLOCK                    &kp HOME         &kp LEFT  &kp UP     &kp DOWN   &kp RIGHT  &kp END  &trans
         &trans  &ud_tilde  &trans    &trans            &trans          &kp F20       &trans    &mo 13  &kp PAUSE_BREAK  &trans    &kp PG_UP  &kp PG_DN  &none      &trans
-                                     &trans            &mt LALT MINUS  &lt 10 N0     &trans    &trans  &trans           &trans    &trans
+                                     &trans            &mt LALT MINUS  &lthp 10 N0   &trans    &trans  &trans           &trans    &trans
             >;
 
             sensor-bindings =
@@ -449,11 +409,11 @@
 
         mail {
             bindings = <
-                &trans  &trans  &trans  &trans  &trans                    &jonasgoogle  &m7onas1ukas  &trans  &trans  &macro_192
-        &trans  &trans  &trans  &trans  &trans  &trans                    &trans        &trans        &trans  &trans  &trans      &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                    &trans        &trans        &trans  &trans  &trans      &trans  &trans
-        &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans        &trans        &trans  &trans  &trans      &trans
-                                &trans  &trans  &trans  &trans    &trans  &trans        &trans        &trans
+                &trans  &trans  &trans  &trans  &trans                    &trans        &trans  &trans  &trans  &macro_192
+        &trans  &trans  &trans  &trans  &trans  &trans                    &trans        &trans  &trans  &trans  &trans      &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                    &trans        &trans  &trans  &trans  &trans      &trans  &trans
+        &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans        &trans  &trans  &trans  &trans      &trans
+                                &trans  &trans  &trans  &trans    &trans  &trans        &trans  &trans
             >;
         };
 
