@@ -66,65 +66,34 @@
         };
 
 
-        tmux_ht: tmux_hold_tap {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            flavor = "hold-preferred";
-            bindings = <&tmux_tap &tmux_layer>;
-        };
-
-        tmux2_ht: tmux2_hold_tap {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            flavor = "hold-preferred";
-            bindings = <&tmux2_tap &tmux2_layer>;
-        };
     };
 
     macros {
-        tmux_tap: tmux_tap {
+        tmux_nav: tmux_nav {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <10>;
             tap-ms = <10>;
-            bindings = <&kp LC(B)>;
-        };
-
-        tmux_layer: tmux_layer {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <10>;
-            tap-ms = <10>;
-            bindings =
-                <&macro_press &mo 10>
+            bindings
+                = <&macro_press &mo 10>
                 , <&macro_tap &kp LC(B)>
                 , <&macro_pause_for_release>
-                , <&macro_release &mo 10>;
+                , <&macro_release &mo 10>
+                ;
         };
 
-        tmux2_tap: tmux2_tap {
+        tmux2_nav: tmux2_nav {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <10>;
             tap-ms = <10>;
-            bindings =
-                <&kp LC(B)>
-                , <&kp LC(B)>;
-        };
-
-        tmux2_layer: tmux2_layer {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <10>;
-            tap-ms = <10>;
-            bindings =
-                <&macro_press &mo 10>
+            bindings
+                = <&macro_press &mo 10>
                 , <&macro_tap &kp LC(B)>
                 , <&macro_tap &kp LC(B)>
                 , <&macro_pause_for_release>
-                , <&macro_release &mo 10>;
+                , <&macro_release &mo 10>
+                ;
         };
 
 
@@ -220,12 +189,6 @@
             label = "MACRO_192";
         };
 
-        tmux_2nd_layer: tmux_2nd_layer {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(B) &kp LC(B)>;
-            label = "TMUX_2ND_LAYER";
-        };
     };
 
     combos {
@@ -264,7 +227,7 @@
         &tog 4       &mo 18   &kp COMMA  &kp PERIOD  &kp P   &kp Z                           &kp F         &kp G         &kp C         &kp T         &kp Y          &none
 &mo 20  &key_repeat  &kp A    &kp O      &kp E       &kp I   &kp U                           &kp H         &kp D         &kp R         &kp N         &kp S          &kp L  &kp ENTER
         &kp ESC      &kp TAB  &kp Q      &kp J       &kp K   &kp X      &kp K_MUTE    &to 2  &kp B         &kp M         &kp W         &kp V         &kp BACKSPACE  &none
-                                         &mo 15      &tmux2_ht  &sk LSHFT  &mo 5         &sl 6  &kp SPACE     &tmux_ht        &tmux2_ht
+                                         &mo 15      &tmux2_nav  &sk LSHFT  &mo 5         &sl 6  &kp SPACE     &tmux_nav        &tmux2_nav
             >;
 
             // sensor-bindings = <&as5600_scroll PG_DN PG_UP>;
@@ -626,7 +589,7 @@
         &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans     &trans           &trans  &trans  &kp C
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans     &trans           &trans  &trans  &trans  &trans
         &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans     &trans           &trans  &trans  &trans
-                                &trans  &trans  &mo 30  &trans    &trans  &trans  &kp RC(B)  &tmux_2nd_layer
+                                &trans  &trans  &mo 30  &trans    &trans  &trans  &kp RC(B)  &tmux_ht
             >;
         };
 
