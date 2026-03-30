@@ -68,30 +68,23 @@
         // --- TMUX SINGLE (Ctrl+B) ---
 
         tmux_ht: tmux_hold_tap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "TMUX_HT";
-            #binding-cells = <0>;
+    compatible = "zmk,behavior-hold-tap";
+    #binding-cells = <0>;
 
-            tapping-term-ms = <200>;
-            flavor = "hold-preferred";
+    tapping-term-ms = <200>;
+    flavor = "hold-preferred";
 
-            bindings = <&kp RC(B)>, <&tmux_layer>;
-        };
+    bindings = <&kp RC(B) &tmux_layer>;
+};
+tmux2_ht: tmux2_hold_tap {
+    compatible = "zmk,behavior-hold-tap";
+    #binding-cells = <0>;
 
-        // --- TMUX DOUBLE (Ctrl+B Ctrl+B) ---
+    tapping-term-ms = <200>;
+    flavor = "hold-preferred";
 
-        tmux2_ht: tmux2_hold_tap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "TMUX2_HT";
-            #binding-cells = <0>;
-
-            tapping-term-ms = <200>;
-            flavor = "hold-preferred";
-
-            bindings = <&tmux2_tap>, <&tmux2_layer>;
-        };
-        };
-
+    bindings = <&tmux2_tap &tmux2_layer>;
+};
     macros {
 
         // --- HOLD: Ctrl+B + Number Layer (Layer 10) ---
