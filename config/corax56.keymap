@@ -160,6 +160,13 @@
             bindings = <&kp N1 &kp N9 &kp N2 &kp DOT &kp N1 &kp N6 &kp N8 &kp DOT &kp N1 &kp N7 &kp N8 &kp DOT>;
             label = "MACRO_192";
         };
+
+        tmux_2nd_layer: tmux_2nd_layer {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RC(B) &kp RC(B)>;
+            label = "TMUX_2ND_LAYER";
+        };
     };
 
     combos {
@@ -198,7 +205,7 @@
         &tog 4       &mo 18   &kp COMMA  &kp PERIOD  &kp P   &kp Z                           &kp F         &kp G         &kp C         &kp T         &kp Y          &none
 &mo 20  &key_repeat  &kp A    &kp O      &kp E       &kp I   &kp U                           &kp H         &kp D         &kp R         &kp N         &kp S          &kp L  &kp ENTER
         &kp ESC      &kp TAB  &kp Q      &kp J       &kp K   &kp X      &kp K_MUTE    &to 2  &kp B         &kp M         &kp W         &kp V         &kp BACKSPACE  &none
-                                         &mo 15      &mo 16  &sk LSHFT  &mo 5         &sl 6  &kp SPACE     &to 28        &mo 18
+                                         &mo 15      &mo 16  &sk LSHFT  &mo 5         &sl 6  &kp SPACE     &to 28        &to 28
             >;
 
             // sensor-bindings = <&as5600_scroll PG_DN PG_UP>;
@@ -554,13 +561,13 @@
                 <&inc_dec_kp LS(LC(SLASH)) LC(SLASH)>;
         };
 
-        code {
+        tmux {
             bindings = <
-                &trans  &to 0   &trans  &trans  &trans                    &trans  &trans     &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans     &trans  &trans  &trans  &kp C
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans     &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans     &trans  &trans  &trans  &trans
-                                &trans  &trans  &trans  &trans    &trans  &trans  &kp RC(B)  &trans
+                &trans  &to 0   &trans  &trans  &trans                    &trans  &trans     &trans           &trans  &trans
+        &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans     &trans           &trans  &trans  &kp C
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans     &trans           &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans     &trans           &trans  &trans  &trans
+                                &trans  &trans  &mo 30  &trans    &trans  &trans  &kp RC(B)  &tmux_2nd_layer
             >;
         };
 
@@ -571,6 +578,26 @@
 &trans  &trans  &trans  &kp A   &kp S   &kp D   &trans                    &kp HOME  &kp LEFT  &kp UP     &kp DOWN   &kp RIGHT  &kp END  &trans
         &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans    &trans    &kp PG_UP  &kp PG_DN  &trans     &trans
                                 &trans  &trans  &trans  &trans    &trans  &trans    &trans    &trans
+            >;
+        };
+
+        tmux_2 {
+            bindings = <
+                &trans  &trans  &trans  &trans  &trans                    &trans  &trans        &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &kp N7        &kp N8  &kp N9  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &kp N4        &kp N5  &kp N6  &kp N0  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &kp NUMBER_1  &kp N2  &kp N3  &trans  &trans
+                                &trans  &trans  &trans  &trans    &trans  &trans  &trans        &trans
+            >;
+        };
+
+        tmux_2nd_layer {
+            bindings = <
+                &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                                &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
             >;
         };
     };
