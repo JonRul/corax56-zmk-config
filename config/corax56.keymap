@@ -65,31 +65,32 @@
             bindings = <&to 3>, <&to 0>;
         };
 
-        // --- TMUX SINGLE (Ctrl+B) ---
 
         tmux_ht: tmux_hold_tap {
-    compatible = "zmk,behavior-hold-tap";
-    #binding-cells = <0>;
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            flavor = "hold-preferred";
+            bindings = <&tmux_tap &tmux_layer>;
+        };
 
-    tapping-term-ms = <200>;
-    flavor = "hold-preferred";
-
-    bindings = <&kp RC(B) &tmux_layer>;
-};
-
-tmux2_ht: tmux2_hold_tap {
-    compatible = "zmk,behavior-hold-tap";
-    #binding-cells = <0>;
-
-    tapping-term-ms = <200>;
-    flavor = "hold-preferred";
-
-    bindings = <&tmux2_tap &tmux2_layer>;
-};
+        tmux2_ht: tmux2_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            flavor = "hold-preferred";
+            bindings = <&tmux2_tap &tmux2_layer>;
+        };
     };
-    macros {
 
-        // --- HOLD: Ctrl+B + Number Layer (Layer 10) ---
+    macros {
+        tmux_tap: tmux_tap {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp LC(B)>;
+        };
 
         tmux_layer: tmux_layer {
             compatible = "zmk,behavior-macro";
@@ -98,13 +99,10 @@ tmux2_ht: tmux2_hold_tap {
             tap-ms = <10>;
             bindings =
                 <&macro_press &mo 10>
-                , <&macro_tap &kp RC(B)>
+                , <&macro_tap &kp LC(B)>
                 , <&macro_pause_for_release>
-                , <&macro_release &mo 10>
-                ;
+                , <&macro_release &mo 10>;
         };
-
-        // --- TAP: Ctrl+B Ctrl+B ---
 
         tmux2_tap: tmux2_tap {
             compatible = "zmk,behavior-macro";
@@ -112,12 +110,9 @@ tmux2_ht: tmux2_hold_tap {
             wait-ms = <10>;
             tap-ms = <10>;
             bindings =
-                <&kp RC(B)>
-                , <&kp RC(B)>
-                ;
+                <&kp LC(B)>
+                , <&kp LC(B)>;
         };
-
-        // --- HOLD: Ctrl+B Ctrl+B + Number Layer ---
 
         tmux2_layer: tmux2_layer {
             compatible = "zmk,behavior-macro";
@@ -126,11 +121,10 @@ tmux2_ht: tmux2_hold_tap {
             tap-ms = <10>;
             bindings =
                 <&macro_press &mo 10>
-                , <&macro_tap &kp RC(B)>
-                , <&macro_tap &kp RC(B)>
+                , <&macro_tap &kp LC(B)>
+                , <&macro_tap &kp LC(B)>
                 , <&macro_pause_for_release>
-                , <&macro_release &mo 10>
-                ;
+                , <&macro_release &mo 10>;
         };
 
 
